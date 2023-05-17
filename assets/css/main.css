@@ -113,6 +113,19 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+
+		body.is-project *, body.is-project *:before, body.is-project *:after{
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+		transition: none !important;
+		background: #fbf9f9;
+		}
+
 /* Type */
 
 	body, input, select, textarea {
