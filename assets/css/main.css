@@ -2595,7 +2595,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(18% - 1em);
+			width: calc(20% - 2em);
 			margin: 2em 0 0 2em;
 		}
 
