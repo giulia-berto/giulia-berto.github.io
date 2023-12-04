@@ -129,7 +129,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
+		color: #878686;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -176,11 +176,11 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1.5em 0;
 	}
 
 	h1 {
-		font-size: 2.75em;
+		font-size: 2.5em;
 		font-weight: 700;
 		line-height: 1.3;
 		margin: 0 0 1em 0;
@@ -221,7 +221,7 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.1em;
+		font-size: 0.85em;
 	}
 
 	h3 {
@@ -2056,12 +2056,12 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
-		margin: -1em 0 2em -1em;
+		margin: -1em 0 1em -1em;
 	}
 
 		ul.icons li {
 			display: inline-block;
-			padding: 1em 0 0 1em;
+			padding: 0em 0 0 1em;
 		}
 
 /* Form */
@@ -2585,8 +2585,8 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
-		margin: -2.5em 0 0 -2.5em;
+		position: relative;
+		margin: -4.5em 0 0 -2.5em;
 	}
 
 		.tiles article {
@@ -2595,8 +2595,8 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(33.33333% - 2.5em);
-			margin: 2.5em 0 0 2.5em;
+			width: calc(20% - 2em);
+			margin: 2em 0 0 2em;
 		}
 
 			.tiles article > .image {
@@ -2842,7 +2842,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 5em 0 0.1em 0 ;
+		padding: 1.5em 0 0em 0 ;
 	}
 
 		#header .logo {
@@ -3164,7 +3164,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 2em 0 ;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -3178,7 +3178,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		padding: 3em 0 0 0 ;
+		padding: 1em 0 0 0 ;
 		background-color: #f6f6f6;
 	}
 
@@ -3214,7 +3214,8 @@ input, select, textarea {
 			#footer > .inner .copyright {
 				width: 100%;
 				padding: 0;
-				margin-top: 5em;
+				margin-top: 1em;
+				margin-bottom: 0;
 				list-style: none;
 				font-size: 0.8em;
 				color: rgba(88, 88, 88, 0.5);
@@ -3299,7 +3300,7 @@ input, select, textarea {
 					}
 
 					#footer > .inner .copyright {
-						margin-top: 3em;
+						margin-top: 1em;
 					}
 
 		}
@@ -3307,13 +3308,13 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#footer > .inner .copyright {
-				margin-top: 3em;
+				margin-top: 1em;
 			}
 
 				#footer > .inner .copyright li {
 					border-left: 0;
 					padding-left: 0;
-					margin: 0.75em 0 0 0;
+					margin: 0 0 0 0;
 					display: block;
 					line-height: inherit;
 				}
