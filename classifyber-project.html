@@ -44,11 +44,42 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>White Matter fiber classification</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>White matter fiber classification</h1>
+							<p>The aim of this project was to build a classifier able to classify 
+								white matter fibers into anatomically meaningful white matter tracts 
+								of the human brain. </p>
+							<p>Obtaining accurately segmented white matter tracts in the human brain is essential for
+								multiple applications, such as pre-surgical planning and tractometry. Although notable 
+								improvements have occurred over the years, the segmentation quality is not yet satisfactory, 
+								especially when dealing with datasets with diverse characteristics, such as different 
+								tract properties, tracking methods, or data quality. To overcome these limitations, 
+								we proposed a novel supervised segmentation method, called Classifyber, which combines 
+								in a simple linear model information from the geometry of the fiber paths, from their 
+								connectivity patterns, and from anatomy.</p>
+							<p>Classifyber is a supervised method that performs automatic tract segmentation by learning
+								from example tracts segmented by experts. In particular, Classifyber provides a linear 
+								classifier that accurately predicts whether or not a given streamline (i.e. fiber) belongs 
+								to the tract of interest. In order to create the linear classifier, first we
+								transform each streamline into a vector that contains both its geometrical and anatomical
+								information. Then, we train a linear classifier, specifically Logistic Regression, with such
+								vectors from multiple participants in which experts segmented the tracts of interest.</p>
+							<span class="image main"><img src="images/ohbm2020_poster_Giulia_Berto_img4.png" alt="" /></span>
+							<p>We ran multiple experiments over four different datasets, and compared the performances of 
+								our method, Classifyber, with other three state-of-the-art- tract segmentation methods through
+								the Dice Similarity Coefficient (DSC) score (the higher the better). Classifyber outperformed 
+								the other methods in all cases, and	segmented the tracts very accurately. This occured across 
+								different kinds of tracts, tractography techniques, expert-made segmentations, and data
+								quality. Classifyber is	freely available as an open source web app through the platorm 
+								brainlife.io.</p>
+								<span class="image main"><img src="images/bar_plot.png" alt="" /></span>
+							<p>Read the full paper here: <a href=https://pubmed.ncbi.nlm.nih.gov/32979520/>https://pubmed.ncbi.nlm.nih.gov/32979520/</a>
+							<br>Try the brainlife App here: <a href=https://doi.org/10.25663/brainlife.app.265>https://doi.org/10.25663/brainlife.app.265</a></p>
+							<p>Citation: <i>Bertò G, Bullock D, Astolfi P, Hayashi S, Zigiotto L, Annicchiarico L, Corsini F, 
+								De Benedictis A, Sarubbo S, Pestilli F, Avesani P, Olivetti E. Classifyber, a robust 
+								streamline-based linear classifier for white matter bundle segmentation. 
+								Neuroimage. 2021 Jan 1;224:117402. doi: 10.1016/j.neuroimage.2020.117402. Epub 2020 Sep 23. 
+								PMID: 32979520.</i></p>
+							
 						</div>
 					</div>
 			</div>
