@@ -45,11 +45,28 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Concussion classification</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
+							<p>The aim of this study is to use a <b>Transfer Learning</b> framework to classify complete versus incomplete concussion recovery. </p>
+							<p>A concussion is a form of mild Traumatic Brain Injury (mTBI) that leads to temporary alterations of brain functions and incapacitates behavior. 
+							   Although in most of the cases the symptoms resolve within a few days to a couple of weeks, sometimes they can last for months or even for years, a condition identified as incomplete recovery. 
+							   Early identification of incomplete recoveries would allow for early and better optimized treatment. </p>
+							<p>Diffusion Magnetic Resonance Imaging (MRI) is a powerful <b>neuroimaging</b> technique to study the microstructural properties of the brain in vivo.
+							   Recent multi-center data collection and sharing within the community of large MRI datasets have allowed researchers to study microstructural changes after a concussion on an unprecedented scale.
+							   At the same time, the use of Transfer Learning has become popular in particular in fields for which there is a <b>lack of annotated data</b>. 
+							   In neuroimaging and in general in clinical studies, having many annotated samples is generally difficult due for example to long acquisition times, high costs, and difficulties related to data acquisition for specific populations (i.e. children, elderly population, or individuals with pathologies). 
+							   With the use of Transfer Learning we can address this issue by first, training a model to solve a specific task for which a big dataset is available, and then fine-tuning the model to address the original, similar, task.</p>
+							   <span class="image main"><img src="images/transfer-learning-framework.png" alt="" /></span>
+							<p>We used Fractional Anisotropy (FA) 3D images as input for our models for concussion classification, and deep neural networks, specifically 3D <b>Convolutional Neural Networks (CNNs)</b>, as models for our experiments. 
+								CNNs are considered state-of-the-art models to solve <b>computer vision</b> tasks such as image classification and segmentation, and have been already used in several other medical applications, like e.g. Alzheimer's detection and lung segmentation.</p>
+							<p>First, we trained CNNs from scratch to have baseline scores to compare the following models with. A ResNet with 18 layers was used as the model architecture (ResNet18).
+							   Then, we tested the following <b>pretrained models</b>: <br>
+							   - CNN using a ResNet18 pretrained on kinetics data <br>
+							   - CNN using a ResNet50 pretrained on 3D medical imaging data <br>
+							   - CNN using a InceptionResNet pretrained on 3D medical imaging data <br>
+							   In all the three cases, we applied Transfer Learning in two ways: <br>
+							   - retraining only the classification layers, i.e. only the fully connected layers <br>
+							   - retraining the whole network </p>
+							<p>This is an ongoing study.</p>
+							</div>
 					</div>
 			</div>
 
