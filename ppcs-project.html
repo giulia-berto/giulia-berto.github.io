@@ -45,8 +45,33 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Late concussion recovery prediction</h1>
-							<p>The goal of this project was to analyze clinical and neuroimaging data of concussed athletes for late concussion recovery <b>prediction.</b></p>
-							<p>This manuscript is currently under review in NeuroImage:Clinical.
+							<p>The goal of this project was to analyze <b>clinical and neuroimaging data</b> of concussed athletes for late concussion recovery <b>prediction.</b></p>
+							<p>A concussion is a form of mild Traumatic Brain Injury (mTBI) that leads to temporary alterations of brain functions and incapacitates behavior. 
+								Although in most of the cases the symptoms resolve within a few days to a couple of weeks, sometimes they can last for months or even for years, a condition identified as late recovery. 
+								Early identification of late recoveries would allow for early and better optimized treatment. </p>
+							<p>The CARE dataset, distributed by the NCAA/DoD Concussion Assessment Research and Education (CARE)
+								consortium, is the largest open dataset currently available for concussion research with over 35,000
+								among student and military cadet athletes. Only concussed participants with data collected within 24-48h from injury were analyzed. They were
+								divided into two standard groups based on their recovery time: (1) the early recovery group (recovery time < 28 days), and
+								(2) the late recovery group (otherwise).</p>
+							<p><b>CLINICAL DATA ANALYSIS</b>
+							<p><b>Machine learning</b> methods were used to classify the participants into
+								the two recovery groups. Multiple classifiers and combinations of variables as
+								input were tested using Repeated Stratified 5-Fold Cross Validation. Their
+								performances were evaluated using multiple classification metrics on a held-out
+								test set.</p>
+								<span class="image main"><img src="images/clinical-data-results.png" alt="" /></span>
+							<p><b>NEUROIMAGING DATA ANALYSIS</b></p>
+							<p>A cutting edge Magnetic Resonance Imaging (MRI) protocol was applied to a subset
+								of the participants by the CARE consortium, comprising anatomical and diffusion
+								weighted MRI data. A <b>fully reproducible neuroimaging pipeline</b> was implemented on brainlife.
+								Specifically, tractography, white matter tract segmentation (47 tracts), and tract Fractional Anisotropy (FA) profile analysis
+								were performed.	After computing the mean FA tract profile for each of the 47 tracts, a Logistic
+								Regression (LR) binary classifier was used to classify late concussion recoveries. Its
+								performance was then evaluated using multiple classification metrics on a held-out test set. 
+							    An ROC AUC score of 0.86 was obtained, with sensitivity=1, and specificity=0.71.</p>
+								<span class="image main"><img src="images/neuroimaging-pipeline.png" alt="" /></span>
+								<p>This manuscript is currently under review in NeuroImage:Clinical.
 								<br>Read the poster here: <a href=https://github.com/brainlife/app-predict-ppcs/blob/main/poster_nns2023.pdf>ppcs-poster.pdf</a>
 								<br>Try the brainlife App here: <a href=https://doi.org/10.25663/brainlife.app.793>https://doi.org/10.25663/brainlife.app.793</a>
 								<br>Code: <a href=https://github.com/brainlife/app-predict-ppcs/tree/main>app-predict-ppcs</a></p>
