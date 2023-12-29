@@ -47,7 +47,27 @@
 							<h1>White Matter tract segmentation</h1>
 							<p> This project aimed at <b>automatically segment</b> white matter tract in the human brain by considering both anatomy and
 								geometry of the tracts.</p>
-							
+							<p>Diffusion Magnetic Resonance Imaging (dMRI) can provide a virtual representation of the paths of millions
+								of fibers composing the brain white matter. The aim of white matter tract segmentation is to group together fibers that share a similar pathway
+								into anatomically meaningful structures, called tracts, which are of interest for several applications, such as
+								surgical planning and tractometry analyses.<br>
+							Current methods for automatic tract segmentation consider either only prior knowledge about the
+								geometrical properties of a tract, or only its relative anatomical
+								position. To overcome this limitation, we extended a state-of-the-art
+								fiber-based method based on the <b>Linear Assignment Problem</b> (LAP) by taking into account
+								information about both the geometry of the tracts and the underlying anatomy at the same time.</p>
+							<p>The LAP method performs automatic tract segmentation by
+								exploiting the concept of fiber correspondence across subjects. Given a set of previously segmented
+								tracts as examples, the method aims to find the same tract in a new target subject by solving a
+								<b>combinatorial optimization problem</b>. To include prior anatomical
+								information within the optimization process, we proposed to linearly combine the distance matrix (i.e. the original cost matrix) with other two
+								anatomically-informed matrices: the endpoint-based distance matrix and the Region of Interest (ROI)-based distance matrix.</p>
+								<span class="image main"><img src="images/lap-anat-image.png" alt="" /></span>
+							<p>We ran multiple experiments with multiple examples using
+								the LAP method (multi-LAP) and the proposed method (multi-LAP-anat) to segment 6 large tracts and 6 small tracts. We then compared their performances through the Dice 
+								Similarity Coefficient (DSC) score, which measures the degree of overlap with the ground truth tract (the higher the better). The proposed multi-LAP-anat method outperforms 
+								the multi-LAP method for all the bundles considered. Higher improvements were obtained in particular for smaller bundles.</p>
+								<span class="image main"><img src="images/bar_plot_lap.png" alt="" /></span>
 							<p>Read the full paper here: <a href=https://ieeexplore.ieee.org/document/8759174>https://ieeexplore.ieee.org/document/8759174</a>
 								<br>Read the poster here: <a href=https://github.com/giulia-berto/app-multi-lap-anat/blob/master/isbi2019_poster.pdf>lap-anat-poster.pdf</a>
 								<br>Try the brainlife App here: <a href=https://doi.org/10.25663/brainlife.app.227>https://doi.org/10.25663/brainlife.app.227</a>
